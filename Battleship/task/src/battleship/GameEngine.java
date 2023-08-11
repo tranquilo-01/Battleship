@@ -5,7 +5,6 @@ import battleship.map.mapelement.Ship;
 import battleship.util.CoordinateParser;
 import battleship.util.ShipType;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GameEngine {
@@ -30,7 +29,7 @@ public class GameEngine {
         System.out.println("Player 2, place your ships to the game field");
         placeAllShips(maps[1]);
 
-        shoot();
+        battle();
 
         endGame();
     }
@@ -61,7 +60,7 @@ public class GameEngine {
         scanner.nextLine();
     }
 
-    private void shoot() {
+    private void battle() {
         String shotCoordinates;
         char shotResult;
         int[] sunkShips = new int[2];
